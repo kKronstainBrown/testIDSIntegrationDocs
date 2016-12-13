@@ -7,4 +7,4 @@ ENV LICENSE accept
 RUN ln -sf /dev/stdout /logs/stdout-kristin.log 
 RUN ln -sf /dev/stderr /logs/stderr-kristin.log
 
-ENV PASS_MIN_DAYS 1
+RUN sed -i 's/ˆPASS_MIN_DAYS.*/PASS_MIN_DAYS   1/' /etc/login.defs
